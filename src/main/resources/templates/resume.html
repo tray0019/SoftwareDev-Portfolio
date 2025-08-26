@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume- Rustom Trayvilla</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="mt-3 mb-3">
+    <a th:href="@{/}" onclick="if (document.referrer) {history.back(); return false;}"
+       class="btn btn-outline-primary btn-lg">⬅ Back to Portfolio</a>
+</div>
+    <main class="container py-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="h3 m-0">Rustom Trayvilla</h1>
+            <a href="/api/files/resume" class="btn btn-primary">Download PDF</a>
+        </div>
+
+        <p class="text-muted mb-4">Ottawa ON.</p>
+
+        <section class="mb-4">
+            <h2 class="h5">Summary</h2>
+            <p>Full-stack Java developer building Spring Boot APIs and modern UIs. Focused on clean, maintainable code shipping usable features.</p>
+        </section>
+
+        <section class="mb-4">
+            <h2 class="h5">Technical Skills</h2>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>Java</span><span>Advanced</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width:85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>OOP (encapsulation, inheritance, polymorphism)</li>
+                    <li>Collections (List/Map/Set), Streams & Lambdas</li>
+                    <li>Exceptions, Generics</li>
+                    <li>JUnit 5 & Mockito (basics)</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>Spring Boot (REST, JPA, WebSocket/STOMP)</span><span>Advanced</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 80%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Build RESTful APIs with @RestController, @RequestMapping, and ResponseEntity</li>
+                    <li>Dependency Injection & Inversion of Control (@Service, @Component, @Autowired)</li>
+                    <li>Configuration management with application.properties & profiles (application-dev, application-prod)</li>
+                    <li>Exception handling with @ExceptionHandler & @ControllerAdvice</li>
+                    <li>Validation with javax.validation (@NotNull, @Size, etc.)</li>
+                    <li>Project setup with Spring Initializr and Maven</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>MySQL</span><span>Proficient</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 75%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Database design, schema creation, and normalization</li>
+                    <li>Writing SQL queries (SELECT, JOIN, aggregate functions)</li>
+                    <li>Integration with Spring Boot via JDBC and JPA/Hibernate</li>
+                    <li>Environment-specific configuration (application-dev.properties for MySQL, application-prod.properties for PostgreSQL on Render)</li>
+                    <li>Using Render environment variables for production database connections</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>JPA/Hibernate</span><span>Proficient</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 75%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Entity mapping with @Entity, @Id, @GeneratedValue</li>
+                    <li>Relationships: @OneToMany, @ManyToOne, @ManyToMany, @JoinColumn</li>
+                    <li>Data persistence with JpaRepository, custom queries, and derived query methods</li>
+                    <li>Handling lazy vs. eager loading strategies</li>
+                    <li>Hibernate dialects and schema generation (spring.jpa.hibernate.ddl-auto)</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>Git/GitHub</span><span>Proficient</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 70%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Version control with Git (init, clone, add, commit, push, pull, fetch, merge)</li>
+                    <li>Branching strategies (feature branches, merging into main, conflict resolution)</li>
+                    <li>Managing remote repositories on GitHub (origin setup, upstream sync)</li>
+                    <li>Handling common issues (merge conflicts, rejected pushes, fast-forward merges)</li>
+                    <li>GitHub project hosting for personal & portfolio apps (Spring Boot + Angular apps)</li>
+                    <li>Using .gitignore for IDE/build artifacts</li>
+                    <li>Building README files with Markdown and GitHub Shields badges for project documentation</li>
+                    <li>Deployment pipelines via GitHub → Render (frontend static sites & backend services)</li>
+                </ul>
+            </div>
+
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>IntelliJ IDEA,VS Studio,Eclipse</span><span>Proficient</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 70%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>IntelliJ IDEA – primary IDE for Java & Spring Boot development (project setup, debugging, Maven integration)</li>
+                    <li>Visual Studio Code – frontend development with Angular/TypeScript, Node.js; extensions for linting & debugging</li>
+                    <li>Eclipse – experienced with Java projects, Spring Boot plugins, and legacy environments</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>Maven</span><span>Proficient</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 70%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Project build & dependency management with pom.xml</li>
+                    <li>Adding & configuring Spring Boot, JPA/Hibernate, Lombok, MySQL/PostgreSQL connectors</li>
+                    <li>Lifecycle commands: mvn clean install, mvn package, mvn spring-boot:run</li>
+                    <li>Multi-environment builds (application-dev vs. application-prod)</li>
+                    <li>Creating runnable JARs for deployment (including Render with Dockerfile)</li>
+                    <li>Understanding of plugins (Spring Boot Maven Plugin, Compiler Plugin)</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>HTML/CSS</span><span>Proficient</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 70%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Semantic HTML5 structure (forms, tables, media, accessibility best practices)</li>
+                    <li>Responsive layouts using Flexbox and CSS Grid</li>
+                    <li>Styling with custom CSS and integration of frameworks (Bootstrap 5)</li>
+                    <li>Component-based templating (Angular + HTML)</li>
+                    <li>Using CSS classes/IDs for dynamic styling in Angular/Thymeleaf templates</li>
+                    <li>Familiar with best practices: mobile-first design, separation of content & style</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>Python</span><span>Intermediate</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 50%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Core syntax: variables, control flow, functions, and modules</li>
+                    <li>Data structures: lists, tuples, sets, dictionaries</li>
+                    <li>Object-Oriented Programming (classes, inheritance, encapsulation)</li>
+                    <li>File handling (read/write text, CSV, JSON)</li>
+                    <li>Exposure to libraries for data parsing and document handling (e.g., openpyxl, python-docx, reportlab, pandas)</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>JavaScript</span><span>Novice</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 40%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Core ES6+ features: let/const, arrow functions, template literals</li>
+                    <li>DOM manipulation (querySelector, event listeners, dynamic updates)</li>
+                    <li>Control structures, functions, objects, arrays</li>
+                    <li>Asynchronous programming with Promises & async/await</li>
+                    <li>Fetch API for HTTP requests (REST API consumption)</li>
+                    <li>Input validation & basic form handling</li>
+                    <li>Integration with frameworks/libraries (Angular templates & services)</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>Docker</span><span>Beginner</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width: 20%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Containerization of Java (Spring Boot) applications with Dockerfile</li>
+                    <li>Multi-stage builds (Maven build → OpenJDK runtime image)</li>
+                    <li>Running and managing containers with docker run, docker ps, docker exec, docker stop</li>
+                    <li>Building and tagging images (docker build -t app:1.0 .)</li>
+                    <li>Working with official images (OpenJDK, Redis, MySQL, PostgreSQL)</li>
+                    <li>Volume mounting & port mapping for local development</li>
+                    <li>Basic use of Docker Compose for multi-container apps (e.g., backend + database)</li>
+                    <li>Deployment of containerized applications to cloud services (Render free-tier)</li>
+                </ul>
+            </div>
+
+            <div class="mb-2">
+                <div class="d-flex justify-content-between"><span>Angular & TypeScript</span><span>Beginner</span></div>
+                <div class="progress"><div class="progress-bar" role="progressbar" style="width:5%"></div></div>
+                <ul class="mt-2 small text-muted mb-0">
+                    <li>Building single-page applications (SPA) with Angular (standalone components & routing)</li>
+                    <li>TypeScript fundamentals: strong typing, interfaces, classes, generics, modules</li>
+                    <li>Component-based architecture (@Component, inputs/outputs, lifecycle hooks)</li>
+                    <li>Data binding: interpolation, property binding, event binding, two-way binding ([(ngModel)])</li>
+                    <li>Service integration with HttpClient for RESTful API calls</li>
+                    <li>Dependency Injection (@Injectable, service providers)</li>
+                    <li>Angular Forms (template-driven) and form validation</li>
+                    <li>Environment-based configuration (environment.ts, environment.prod.ts)</li>
+                    <li>Styling with Bootstrap 5 + custom CSS within Angular components</li>
+                    <li>Building & deploying Angular apps (ng build --configuration production) to Render static hosting</li>
+                </ul>
+            </div>
+
+            <p class="mt-2"><small><em>Legend:</em> 0–25% = Beginner · 26–40% = Novice · 41–60% = Intermediate ·
+                61–75% = Proficient · 76–90% = Advanced · 91–100% = Expert</small></p>
+        </section>
+    </main>
+
+</body>
+</html>
