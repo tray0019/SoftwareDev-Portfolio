@@ -36,4 +36,15 @@ public class HomeController {
                     .body(pdf);
 
         }
+
+    @GetMapping("/projects/todo-app")
+    public String todoApp(){ return"/projects/todo-app"; }
+
+    @GetMapping("/projects/chat-app")
+    public String chatApp(){ return"projects/chat-app"; }
+
+    @GetMapping("/projects/poll-vote-app")
+    public String pollVoteApp(){ return"projects/poll-vote-app"; }
+
+
 }

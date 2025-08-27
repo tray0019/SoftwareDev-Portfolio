@@ -1,0 +1,20 @@
+.hover-card {
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+.hover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15); /* like shadow-lg */
+    background-color: #fff; /* subtle brighten */
+    cursor: pointer;
+}
+
+/* Nice title hover */
+.card-title .stretched-link:hover { color: #0d6efd; }
+/* Keyboard focus */
+.card:focus-within { outline: 2px solid #0d6efd33; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+    .hover-card { transition: none; }
+    .hover-card:hover { transform: none; }
+}
+
