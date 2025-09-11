@@ -18,36 +18,39 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="h3 m-o">Chat-App</h1>
         <div class="d-flex gap-2">
-            <a href="https://to-do-application-1sl6.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Live Demo</a>
-            <a href="https://github.com/tray0019/To-Do-Application.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Source Code</a>
+            <a href="https://real-time-chat-92ur.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Live Demo</a>
+            <a href="https://github.com/tray0019/Real-Time-Chat-.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Source Code</a>
         </div>
     </div>
 
     <section class="mb-4">
         <h2 class="h5">Overview</h2>
         <p>
-            A simmple task manager built with Spring Boot, Thymleaf, and MySQL.
-            Users can create tasks, toggle completion, and delte entries.
-            Focused on clean MVC separation and basic CRUD with JPA.
+            A simple real-time chat application built with Spring Boot,
+            STOMP over WebSocket, and Thymeleaf. Users can join the chat,
+            send messages, and see updates instantly in the browser.
+            Focused on clean configuration and publish/subscribe messaging.
         </p>
     </section>
 
     <section class="mb-4">
         <h2 class="h5">Architecture</h2>
         <ul>
-            <li><strong>Controller</strong> handles HTTP requests and return Thymeleaf views.</li>
-            <li><strong>Service</strong> encapsulates business logic.</li>
-            <li><strong>Repository</strong> uses JPA for persistence</li>
-            <li><strong>Entity</strong> models the Task with fields: id, text, completed.</li>
+            <li><strong>WebSocketConfig</strong> sets up STOMP over WebSocket with /chat endpoint and SockJS fallback </li>
+            <li><strong>Controller</strong> maps messages from /app/sendMessage and broadcasts to topic/messages.</li>
+            <li><strong>Model</strong> defines ChatMessage with fields: id, sender, content.</li>
+            <li><strong>View</strong> is a Thymeleaf page (chat.html) using Bootstrap, SockJS, and STOMP.js</li>
         </ul>
     </section>
 
     <section class="mb-4">
         <h2 class="h5">Key Features</h2>
         <ul>
-            <li>Create, toggle, and delete tasks (JPA + Thymeleaf forms).</li>
-            <li>Server-side rendering with Bootstrap UI.</li>
-            <li>Dockerized app for easy run in any environment.</li>
+            <li>Real-time chat with WebSocket + STOMP</li>
+            <li>SockJS fallback for wider browser support</li>
+            <li>Simple publish/subscribe model (/app, /topic).</li>
+            <li>Server-side rendered UI with Bootstrap</li>
+            <li>Dockerized app for easy deployment in any environment</li>
         </ul>
     </section>
 

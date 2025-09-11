@@ -18,27 +18,49 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="h3 m-o">Poll-Vote-App</h1>
         <div class="d-flex gap-2">
-            <a href="https://to-do-application-1sl6.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Live Demo</a>
-            <a href="https://github.com/tray0019/To-Do-Application.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Source Code</a>
+            <a href="https://poll-vote-app-frontend.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Live Demo</a>
+            <a href="https://github.com/tray0019/poll-vote-app.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">Source Code</a>
         </div>
     </div>
 
     <section class="mb-4">
         <h2 class="h5">Overview</h2>
         <p>
-            A simmple task manager built with Spring Boot, Thymleaf, and MySQL.
-            Users can create tasks, toggle completion, and delte entries.
-            Focused on clean MVC separation and basic CRUD with JPA.
+            A lightweight poll/voting app built with Spring Boot (REST), Spring Data + MySQL,
+            and an Angular frontend. Users can create polls with multiple options, vote, and
+            see totals update immediately.
         </p>
     </section>
 
     <section class="mb-4">
         <h2 class="h5">Architecture</h2>
+        <h6>Backend (Spring Boot) </h6>
         <ul>
-            <li><strong>Controller</strong> handles HTTP requests and return Thymeleaf views.</li>
-            <li><strong>Service</strong> encapsulates business logic.</li>
-            <li><strong>Repository</strong> uses JPA for persistence</li>
-            <li><strong>Entity</strong> models the Task with fields: id, text, completed.</li>
+            <li><strong>Controller</strong> exposes /api/polls (create, list, get by id) and /api/polls/vote (cast vote).</li>
+            <li><strong>Service</strong> validates vote index, increments the selected option's voteCount, and persists.</li>
+            <li><strong>Repository</strong> uses Spring Data JPA for persistence.</li>
+            <li>
+                <strong>Model</strong>
+                <ul>
+                    <li> Poll (id, question, options)</li>
+                    <li> OptionVote (optionText, voteCount) as @Embeddable via @ElementCollection</li>
+                </ul>
+            </li>
+            <li>
+                <strong>CORS</strong>
+                <ul>
+                    <li>Global CorsFilter allows https://poll-vote-app-frontend.onrender.com</li>
+                    <li>Controller-level @CrossOrigin also whitelists http://localhost:4200 for dev</li>
+                </ul>
+            </li>
+        </ul>
+        <h6>Frontend (Angular, standalone components) </h6>
+        <ul>
+            <li>Create polls with any number of options.</li>
+            <li>Vote on polls; counts are persisted and reflected in the UI.</li>
+            <li>CORS ready for separate FE/BE deployment</li>
+            <li>Environment-based API switching (local vs Render).</li>
+            <li>Simple, decoupled design API and UI deploy independently.</li>
         </ul>
     </section>
 
@@ -51,11 +73,12 @@
         </ul>
     </section>
 
-    <!--Complete case study later-->
+    <!--Complete case study later
     <section class="mb-4">
         <h2 class="h5">Case Study</h2>
         <h3 class="h6">Problem</h3>
-    </section>
+    </section>-->
+
 
     <!--Video maybe or screen shot-->
     <section class="mb-4">
