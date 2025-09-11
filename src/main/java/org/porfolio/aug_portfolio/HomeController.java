@@ -38,7 +38,7 @@ public class HomeController {
         }
 
     @GetMapping("/projects/todo-app")
-    public String todoApp(){ return"/projects/todo-app"; }
+    public String todoApp(){ return"projects/todo-app"; }
 
     @GetMapping("/projects/chat-app")
     public String chatApp(){ return"projects/chat-app"; }
